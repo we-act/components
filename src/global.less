@@ -1,0 +1,163 @@
+/**
+ * weact/components 用到的全局样式
+ * @note 请减少依赖全局样式
+ */
+
+@import "./lib-var.less";
+@import "./lib-mixins.less";
+
+// Used for detect hasScrollbar in hoc/withModal.js
+// copy from bootstrap 3.3.7 modal.less
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}
+
+// clearfix
+// --------------------------
+.ui-clearfix {
+    .clearfix();
+}
+
+.ui-fl-l{ float: left; }
+.ui-fl-r{ float: right; }
+.ui-bfc__content {
+    display: table-cell;
+    .clearfix();
+
+    &::after {
+        display: block;
+        height: 0 !important;
+        font-size: xx-large;
+        line-height: 0;
+        clear: both;
+        visibility: hidden;
+        overflow: hidden;
+        content: " x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";
+    }
+}
+
+.ui-svgicon {
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+
+    svg {
+        position: absolute;
+        left: 0;
+        bottom: -0.125em;
+    }
+}
+
+
+// 颜色
+// --------------------------
+
+.ui-c-gray{color: @font-assist;}
+
+// margin padding
+// --------------------------
+
+// 4px
+.ui-m-4 {margin: 4px;}
+.ui-mt-4 {margin-top: 4px;}
+.ui-mr-4 {margin-right: 4px;}
+.ui-mb-4 {margin-bottom: 4px;}
+.ui-ml-4 {margin-left: 4px;}
+.ui-p-4 {padding: 4px;}
+.ui-pt-4 {padding-top: 4px;}
+.ui-pr-4 {padding-right: 4px;}
+.ui-pb-4 {padding-bottom: 4px;}
+.ui-pl-4 {padding-left: 4px;}
+// 5px
+.ui-m-5 {margin: 5px;}
+.ui-mt-5 {margin-top: 5px;}
+.ui-mr-5 {margin-right: 5px;}
+.ui-mb-5 {margin-bottom: 5px;}
+.ui-ml-5 {margin-left: 5px;}
+.ui-p-5 {padding: 5px;}
+.ui-pt-5 {padding-top: 5px;}
+.ui-pr-5 {padding-right: 5px;}
+.ui-pb-5 {padding-bottom: 5px;}
+.ui-pl-5 {padding-left: 5px;}
+// 8px
+.ui-m-8 {margin: 8px;}
+.ui-mt-8 {margin-top: 8px;}
+.ui-mr-8 {margin-right: 8px;}
+.ui-mb-8 {margin-bottom: 8px;}
+.ui-ml-8 {margin-left: 8px;}
+.ui-p-8 {padding: 8px;}
+.ui-pt-8 {padding-top: 8px;}
+.ui-pr-8 {padding-right: 8px;}
+.ui-pb-8 {padding-bottom: 8px;}
+.ui-pl-8 {padding-left: 8px;}
+// 10px
+.ui-m-10 {margin: 10px;}
+.ui-mt-10 {margin-top: 10px;}
+.ui-mr-10 {margin-right: 10px;}
+.ui-mb-10 {margin-bottom: 10px;}
+.ui-ml-10 {margin-left: 10px;}
+.ui-p-10 {padding: 10px;}
+.ui-pt-10 {padding-top: 10px;}
+.ui-pr-10 {padding-right: 10px;}
+.ui-pb-10 {padding-bottom: 10px;}
+.ui-pl-10 {padding-left: 10px;}
+// 15px
+.ui-m-15 {margin: 15px;}
+.ui-mt-15 {margin-top: 15px;}
+.ui-mr-15 {margin-right: 15px;}
+.ui-mb-15 {margin-bottom: 15px;}
+.ui-ml-15 {margin-left: 15px;}
+.ui-p-15 {padding: 15px;}
+.ui-pt-15 {padding-top: 15px;}
+.ui-pr-15 {padding-right: 15px;}
+.ui-pb-15 {padding-bottom: 15px;}
+.ui-pl-15 {padding-left: 15px;}
+// 20px
+.ui-m-20 {margin: 20px;}
+.ui-mt-20 {margin-top: 20px;}
+.ui-mr-20 {margin-right: 20px;}
+.ui-mb-20 {margin-bottom: 20px;}
+.ui-ml-20 {margin-left: 20px;}
+.ui-p-20{ padding: 20px; }
+.ui-pt-20{ padding-top: 20px; }
+.ui-pr-20{ padding-right: 20px; }
+.ui-pb-20{ padding-bottom: 20px; }
+.ui-pl-20{ padding-left: 20px; }
+// 25px
+.ui-m-25 {margin: 25px;}
+.ui-mt-25 {margin-top: 25px;}
+.ui-mr-25 {margin-right: 25px;}
+.ui-mb-25 {margin-bottom: 25px;}
+.ui-ml-25 {margin-left: 25px;}
+.ui-p-25{ padding: 25px; }
+.ui-pt-25{ padding-top: 25px; }
+.ui-pr-25{ padding-right: 25px; }
+.ui-pb-25{ padding-bottom: 25px; }
+.ui-pl-25{ padding-left: 25px; }
+// 30px
+.ui-m-30 {margin: 30px;}
+.ui-mt-30 {margin-top: 30px;}
+.ui-mr-30 {margin-right: 30px;}
+.ui-mb-30 {margin-bottom: 30px;}
+.ui-ml-30 {margin-left: 30px;}
+.ui-p-30{ padding: 30px; }
+.ui-pt-30{ padding-top: 30px; }
+.ui-pr-30{ padding-right: 30px; }
+.ui-pb-30{ padding-bottom: 30px; }
+.ui-pl-30{ padding-left: 30px; }
+// 50px
+.ui-m-50 {margin: 50px;}
+.ui-mt-50 {margin-top: 50px;}
+.ui-mr-50 {margin-right: 50px;}
+.ui-mb-50 {margin-bottom: 50px;}
+.ui-ml-50 {margin-left: 50px;}
+.ui-p-50{ padding: 50px; }
+.ui-pt-50{ padding-top: 50px; }
+.ui-pr-50{ padding-right: 50px; }
+.ui-pb-50{ padding-bottom: 50px; }
+.ui-pl-50{ padding-left: 50px; }

@@ -1,0 +1,115 @@
+@import '../../color.scss';
+
+.icon {
+    display: inline-block;
+    margin-top: -2px;
+    vertical-align: middle;
+    position: relative;
+    box-sizing: border-box;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    background-color: $gray_100;
+    border: 1px solid $gray_500;
+    border-radius: 2px;
+    transition: .1s ease background-color,
+                .1s ease border-color;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 5px;
+        width: 3px;
+        height: 7px;
+        background-color: transparent;
+        border-right: 2px solid #646464;
+        border-bottom: 2px solid #646464;
+        border-bottom-right-radius: 1px;
+        transform: rotate(20deg) scale(0);
+        will-change: transform, background-color;
+        transition: .1s cubic-bezier(.78,.14,.15,.86) transform;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: -9px;
+        left: -9px;
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+    }
+}
+
+.label {
+    display: inline-block;
+    line-height: 16px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:not(:last-of-type) {
+        margin-right: 24px;
+    }
+
+    &:hover {
+        .icon {
+            background-color: $gray_200;
+            border-color: $gray_600;
+        }
+    }
+
+    &:active {
+        .icon {
+            background-color: $gray_300;
+            border-color: $gray_600;
+        }
+    }
+}
+
+.disabled,
+.disabledSelected {
+    cursor: default;
+    color: $gray_700;
+
+    .icon {
+        background-color: #f0f0f2;
+        border: 1px solid #e1e1e6;
+    }
+
+    .input {
+        background-color: #f0f0f2;
+        border: 1px solid #e1e1e6;
+    }
+
+    &:hover {
+        .icon {
+            background-color: #f0f0f2;
+            border-color: #e1e1e6;
+        }
+    }
+    
+    &:active {
+        .icon {
+            background-color: #f0f0f2;
+            border-color: #e1e1e6;
+        }
+    }
+}
+
+.selected .icon {
+    &::before {
+        transform: rotate(40deg) scale(1);
+    }
+}
+.disabledSelected {
+    .icon{
+        &::before {
+            transform: rotate(40deg) scale(1);
+            border-color: #a3a4a6;
+        }
+    }
+}

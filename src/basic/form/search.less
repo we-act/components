@@ -1,0 +1,37 @@
+@import "../../lib-var.less";
+
+//Search
+.mod-search-box__btn {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  width: 30px;
+  line-height: 30px;
+  height: 30px;
+  border: 1px solid @border-default;
+  border-left: none;
+  background: #fff;
+  vertical-align: top;
+  position: relative;
+  *top: 1px;
+  *left: -1px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.mod-search-box__icon2 {
+  display: inline-block;
+  background-image: url(./img/search.png);
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+.mod-search-box__input {
+  width: 200px;
+  vertical-align: top;
+  color: #aaa;
+}

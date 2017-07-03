@@ -1,0 +1,57 @@
+@import "../../lib-var.less";
+
+.mod-arrow-box{
+    position: relative;
+    color: @font-assist;
+    border: 1px solid #e7e7eb;
+}
+.mod-arrow-box__inner{
+    padding: 4.5px 12px;
+    line-height: 21px;
+    background-color: #fff;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.mod-arrow-box__arrow{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+}
+.mod-arrow-box_right{
+
+    .mod-arrow-box__arrow-out{
+        border-left: 6px solid #e7e7eb;
+        border-right: none;
+        right: 0;
+        top: 50%;
+        margin-right: -6px;
+        margin-top: -6px;
+    }
+    .mod-arrow-box__arrow-in{
+        border-left: 6px solid #fff;
+        border-right: none;
+        right: 0;
+        top: 50%;
+        margin-right: -4px;
+        margin-top: -6px;
+    }
+}
+.mod-arrow-box_left{
+    .mod-arrow-box__arrow-out{
+        border-right: 6px solid #e7e7eb;
+        border-left: none;
+        left: 0;
+        top: 50%;
+        margin-left: -6px;
+        margin-top: -6px;
+    }
+    .mod-arrow-box__arrow-in{
+        border-right: 6px solid #fff;
+        border-left: none;
+        left: 0;
+        top: 50%;
+        margin-left: -4px;
+        margin-top: -6px;
+    }
+}

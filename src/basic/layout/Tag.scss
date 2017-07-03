@@ -1,0 +1,68 @@
+@import '../../color.scss';
+
+.wrapper {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    height: 28px;
+    font-size: 13px;
+    line-height: 26px;
+    color: $gray_900;
+    white-space: nowrap;
+    background-color: $gray_100;
+    border: 1px solid $gray_400;
+    border-radius: 3px;
+    transition: .1s ease background-color,
+                .1s ease border-color,
+                .19s cubic-bezier(0.74, 0.32, 0.37, 0.99) transform,
+                .22s cubic-bezier(0.74, 0.32, 0.37, 0.99) width,
+                .22s cubic-bezier(0.74, 0.32, 0.37, 0.99) margin-right,
+                .19s cubic-bezier(0.74, 0.32, 0.37, 0.99) padding-left,
+                .19s cubic-bezier(0.74, 0.32, 0.37, 0.99) padding-right,
+                .19s cubic-bezier(0.74, 0.32, 0.37, 0.99) opacity,
+                .19s cubic-bezier(0.74, 0.32, 0.37, 0.99) border-left-width,
+                .19s cubic-bezier(0.74, 0.32, 0.37, 0.99) border-right-width;
+    transform-origin: 0% 100%;
+    cursor: default;
+    -webkit-user-select: none; 
+    user-select: none; 
+
+    &:hover {
+        background-color: $gray_200;
+        border-color: $gray_500;
+    }
+
+    &:active {
+        background-color: $gray_300;
+        border-color: $gray_500;
+    }
+
+    svg {
+        display: inline-block;
+        vertical-align: -3px;
+        margin-left: 9px;
+        fill: #bdbec0;
+        cursor: pointer;
+
+        &:hover {
+            fill: #87888c;
+        }
+    }
+}
+.text {
+    font-size: 14px;
+    background-color: #fff;
+    border: none;
+
+    svg {
+        margin-left: 4px;
+    }
+
+    &:hover {
+        background-color: #fff;
+    }
+}
+.removing {
+    transform: scale(.9);
+    opacity: 0;
+}

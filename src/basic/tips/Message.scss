@@ -1,0 +1,67 @@
+@import '../../color.scss';
+.wrapper {
+    position: fixed;
+    z-index: 1;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+// vw 单位，解决 Dialog 点击 Confirm 后 Message 一条信息，会造成抖动的问题。
+@supports (width: 100vw) {
+    .wrapper {
+        width: 100vw;
+    }
+}
+.inner {
+    display: inline-block;
+    line-height: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #fff;
+    border: 1px solid $gray_600;
+    border-radius: 2px;
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.03), 0 1px 2px 0 rgba(0,0,0,0.06), 0 3px 6px 0 rgba(0,0,0,0.04);
+    animation: moveIn .2s ease both;
+
+    svg {
+        display: inline-block;
+        vertical-align: -3px;
+        margin-right: 8px;
+    }
+}
+.content {
+    display: inline-block;
+}
+.moveOut {
+    animation: moveOut .2s ease both;
+}
+
+@keyframes moveIn {
+    0% {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes moveOut {
+    100% {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.disappearing {
+    opacity: 0;
+    transform: translateY(-60px);
+    transition: .2s ease opacity,
+                .2s ease transform;
+}

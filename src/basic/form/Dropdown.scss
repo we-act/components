@@ -1,0 +1,146 @@
+@import '../../color.scss';
+
+.menu {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 36px;
+    min-width: 150px;
+    height: 36px;
+    line-height: 34px;
+    background-color: $gray_100;
+    border: 1px solid $gray_400;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: .1s ease color,
+                .1s ease background-color,
+                .1s ease border-color;
+
+    &:hover {
+        background-color: $gray_200;
+        border-color: $gray_500;
+
+        .icon {
+            fill: #808080;
+        }
+    }
+
+    &:active {
+        background-color: $gray_300;
+        border-color: $gray_500;
+
+        .icon {
+            fill: #808080;
+        }
+    }
+}
+
+.list {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: -1px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    max-height: 180px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: #fff;
+    border: 1px solid $gray_500;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.04), 
+                0 2px 4px 0 rgba(0,0,0,0.08);
+    opacity: 0;
+    visibility: hidden;
+    transition: .1s ease opacity,
+                0s ease visibility .1s;
+
+    &::-webkit-scrollbar {
+        width: 14px;
+    }
+     
+    &::-webkit-scrollbar-track {
+        background: #f8f9fa;
+    }
+     
+    &::-webkit-scrollbar-thumb {
+        background-color: #c0c1c2;
+        border: 4px solid #f8f9fa;
+        border-radius: 15px;
+    }
+
+    &:hover {
+        overflow-y: auto;
+    }
+
+    a {
+        display: block;
+        padding-left: 12px;
+        line-height: 36px;
+        white-space: nowrap;
+        color: $gray_900;
+        transition: .1s ease background-color;
+
+        &:hover {
+            background-color: $gray_300;
+            text-decoration: none;
+        }
+    }
+}
+
+.disabled {
+    background-color: #f0f0f2;
+    border-color: #e1e1e6;
+    color: #a3a4a6;
+    cursor: default;
+
+    &:hover {
+        background-color: #f0f0f2;
+        border-color: #e1e1e6;
+        color: #a3a4a6;
+
+        .icon {
+            fill: #a6a6a6;
+        }
+    }
+}
+
+.show {
+    background-color: $gray_200;
+    border-color: $gray_500;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    .icon {
+        fill: #808080;
+    }
+
+    .list {
+        opacity: 1;
+        visibility: visible;
+        transition: 0s ease visibility,
+                    .1s ease opacity;
+    }
+}
+
+.switch {
+    display: inline-block;
+    width: 100%;
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.icon {
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    width: 16px;
+    height: 16px;
+    fill: #a6a6a6;
+    will-change: fill;
+}

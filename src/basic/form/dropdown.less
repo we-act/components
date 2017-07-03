@@ -1,0 +1,116 @@
+@import "../../lib-var.less";
+
+.mod-dropdown-menu {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  position: relative;
+  min-width: 116px;
+  *width: 116px;
+  line-height: normal;
+  text-align: left;
+}
+.mod-dropdown-menu__label {
+  display: block;
+  cursor: pointer;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-break: normal;
+  margin-left: 10px;
+  margin-right: 25px;
+}
+.mod-dropdown-menu__switch {
+  display: inline-block;
+  overflow: visible;
+  padding: 0 22px;
+  /* height: 30px; */
+  min-width: 60px;
+  /* line-height: 30px; */
+  vertical-align: middle;
+  /* text-align: center; */
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid #e6e7ec;
+  cursor: pointer;
+  /* border-radius: 3px; */
+  /* background-clip: padding-box; */
+  position: relative;
+  text-align: left;
+  background-color: #fff;
+  border-color: #e6e7ec;
+  color: #000000;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+}
+.mod-dropdown-menu__switch:hover {
+  text-decoration: none;
+}
+
+.mod-dropdown-menu__arrow {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -2.5px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: dashed;
+  border-color: transparent;
+  border-bottom-width: 0;
+  border-top-color: #c6c6c6;
+  border-top-style: solid;
+}
+
+.mod-dropdown-menu__list {
+  display: none;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  z-index: 10;
+  max-height: 150px;
+  min-height: 2em;
+  min-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid #e6e7ec;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+.mod-dropdown-menu__item {
+  cursor: pointer;
+  line-height: 30px;
+  &:hover {
+    background-color: #e5e5e5;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: #222222;
+    white-space: nowrap;
+    padding: 0 28px 0 10px;
+  }
+}
+
+.mod-dropdown-menu_show {
+  .mod-dropdown-menu__switch {
+    border: 1px solid #e6e7ec;
+    border-radius: 0;
+  }
+  .mod-dropdown-menu__list {
+    display: block;
+  }
+}
+.mod-dropdown-menu__switch_disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: default;
+}

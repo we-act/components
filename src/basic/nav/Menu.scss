@@ -1,0 +1,109 @@
+@import '../../color.scss';
+
+.menu {
+    box-sizing: border-box;
+    padding-top: 4px;
+    width: 217px;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid $gray_500;
+}
+.group {
+    padding-bottom: 19px;
+    border-bottom: 1px solid $gray_300;
+}
+.groupTitle {
+    padding-left: 24px;
+    line-height: 52px;
+    color: $gray_700;
+    cursor: default;
+}
+.sub {
+    position: relative;
+    border-bottom: 1px solid $gray_300;
+
+    svg {
+        position: absolute;
+        top: 18px;
+        right: 16px;
+        fill: #bdbec0;
+        transition: .1s ease fill,
+                    .22s ease transform;
+    }
+
+    .group {
+        padding-bottom: 0;
+        border-bottom: none;
+
+        .item {
+            padding-left: 50px;
+        }
+    }
+    .groupTitle {
+        padding-left: 36px;
+        line-height: 40px;
+    }
+}
+.subTitle {
+    padding-left: 24px;
+    line-height: 52px;
+    color: $gray_800;
+    transition: background-color .1s ease,
+                color .1s ease;
+    cursor: pointer;
+
+    &:hover {
+        svg {
+            fill: #87888c;
+        }
+    }
+}
+.subTitleOpen {
+    svg {
+        fill: #87888c;
+        transform: rotate(-180deg);
+    }
+}
+.subTitleList {
+    padding-bottom: 19px;
+    overflow: hidden;
+    transition: .22s cubic-bezier(0.74, 0.32, 0.37, 0.99) height,
+                .22s cubic-bezier(0.74, 0.32, 0.37, 0.99) padding,
+                .15s cubic-bezier(0.74, 0.32, 0.37, 0.99) opacity;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        background-color: transparent;
+    }
+
+    &::-moz-scrollbar {
+        width: 0px;
+        background-color: transparent;
+    }
+
+    &::-ms-scrollbar {
+        width: 0px;
+        background-color: transparent;
+    }
+
+    &::scrollbar {
+        width: 0px;
+        background-color: transparent;
+    }
+}
+.item {
+    padding-left: 36px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color .1s ease,
+                color .1s ease;
+
+    &:hover {
+        background-color: $gray_200;
+    }
+
+    &.active {
+        color: #44B549;
+        background-color: #e7fce7;
+    }
+}

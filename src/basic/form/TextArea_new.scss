@@ -1,0 +1,25 @@
+@import '../../color.scss';
+
+.textarea {
+    box-sizing: border-box;
+    padding: 8px;
+    color: #2c2d2e;
+    font-size: inherit;  
+    height: 36px;
+    line-height: 1.4;
+    background-color: #fff;
+    border: 1px solid $gray_400;
+    border-radius: 2px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;  
+    transition: border-color .1s ease; 
+
+    &:focus {
+        border-color: $gray_500;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $gray_700;
+    }
+}

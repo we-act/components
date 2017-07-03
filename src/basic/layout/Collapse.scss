@@ -1,0 +1,74 @@
+@import '../../color.scss';
+.outer {
+    border: 1px solid $gray_400;
+    border-bottom: none;
+}
+.list {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.header {
+    overflow: hidden;
+    padding-left: 11px;
+    height: 40px;
+    line-height: 40px;
+    transition: .1s ease background-color;
+    cursor: pointer;
+
+    [data-role^="icon"] {
+        float: left;
+        margin-top: 12px;
+        margin-right: 8px;
+        fill: #bdbec0;
+        -webkit-user-select: none; 
+        user-select: none; 
+        transition: transform .22s cubic-bezier(0.74, 0.32, 0.37, 0.99);
+    }
+
+    &:hover {
+        [data-role^="icon"] {
+            fill: #87888c;
+        }
+    }
+
+    &:active {
+        background-color: $gray_100;
+    }
+}
+.header_txt {
+    overflow: hidden;
+}
+.content {
+    padding-left: 35px;
+    transition: .22s cubic-bezier(0.74, 0.32, 0.37, 0.99) height;
+    will-change: height;
+    background-color: $gray_100;
+    border-top: 1px solid $gray_400;
+    border-bottom: 0px solid $gray_400;
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        height: 24px;
+    }
+}
+.active {
+    [data-role^="icon"] {
+        transform: rotate(90deg);
+        fill: #87888c;
+    }
+}
+.gray {
+    background-color: $gray_100;
+
+    .content {
+        background-color: #fff;
+    }
+
+    .header {
+        &:active {
+            background-color: $gray_200;
+        }
+    }
+}

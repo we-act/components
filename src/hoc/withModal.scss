@@ -1,0 +1,124 @@
+@import '../color.scss';
+.wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding-right: 15px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1000;
+    background-color: rgba(0,0,0,.55);
+    will-change: opacity;
+    opacity: 0;
+    visibility: hidden;
+    transition: .1s cubic-bezier(0.74, 0.32, 0.37, 0.99) all;
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+
+    .inlineBlockLayout {
+        transform: scale(1) translateY(0);
+        transition: .15s cubic-bezier(0.74, 0.32, 0.37, 0.99) transform;
+    }
+}
+.tableLayout {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.tableCellLayout {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+.inlineBlockLayout {
+    display: inline-block;
+    text-align: left;
+    will-change: transform;
+    transform: scale(.98) translateY(-5px);
+    transform-origin: 50% 0%;
+    transition: .1s cubic-bezier(0.74, 0.32, 0.37, 0.99) transform;
+}
+.root {
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid $gray_600;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 12px 24px 0 rgba(0,0,0,0.25);
+}
+
+
+.head {
+    position: relative;
+    padding-left: 20px;
+    line-height: 58px;
+    height: 58px;
+    background-color: $gray_100;
+    border-bottom: 1px solid $gray_400;
+}
+
+.head_title {
+    font-size: 16px;
+    color: $gray_800;
+}
+
+.close {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    right: 6px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    svg {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 16px;
+        height: 16px;
+        fill: #bdbec0;
+    }
+
+    &:hover { 
+        svg {
+            fill: #87888c;
+        }
+    }
+}
+
+.body {
+    padding: 20px;
+    /* TODO: min-width follow design guid */
+    min-width: 426px;
+}
+// 见 Dialog.js 的 sizeList
+.body.sizeMode {
+    padding: 0;
+    position: relative;
+}
+.bodyScroll {
+    overflow-y: auto;
+}
+
+.btn {
+    padding-left: 37px;
+    padding-right: 37px;
+
+    &:not(:last-of-type) {
+        margin-right: 24px;
+    }
+}
+
+.footer {
+    width: 100%;
+    padding: 19px 0;
+    text-align: center;
+    background-color: $gray_100;
+    border-top: 1px solid $gray_400;
+}
+

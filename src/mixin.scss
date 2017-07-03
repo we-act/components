@@ -1,0 +1,39 @@
+@mixin word-break() {
+  word-break:break-all;
+  word-wrap:break-word;
+  white-space: normal;
+}
+
+@mixin clearfix() {
+  zoom:1;
+
+  &:before{
+    content:'';
+    display:block;
+  }
+  &:after{
+    content:'';
+    display:table;
+    clear:both;
+  }
+}
+
+@mixin no-wrap() {
+  word-break: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+
+@mixin text-overflow() {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  max-width:100%;
+}
+@mixin line-overflow($line) {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:$line;
+  -webkit-box-orient:vertical;
+}

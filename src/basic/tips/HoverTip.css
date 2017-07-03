@@ -1,0 +1,37 @@
+.icon {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.iconQuest{
+    width: 16px;
+    height: 16px;
+    vertical-align: -2px;
+    *vertical-align: 2px;
+    background-image: url("./HoverTipQuest.png");
+
+    /* 
+    &:hover{
+        .mod-popover{
+            display: block;
+        }
+    } 
+    */
+}
+
+.iconArrow {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    margin-top: -2.5px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: dashed;
+    border-color: transparent;
+    border-bottom-width: 0;
+    border-top-color: #c6c6c6;
+    border-top-style: solid;
+}

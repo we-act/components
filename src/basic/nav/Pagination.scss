@@ -1,0 +1,93 @@
+@import '../../color.scss';
+
+.pagination{
+    float: right;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    [role="button"] {
+        padding: 0px 16px;
+    }
+
+    [data-role^="icon"] {
+        color: #7d7d7e;
+    }
+}
+.count {
+    margin-left: 8px;
+    margin-right: 8px;
+
+    label {
+        display: inline-block;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
+.count_small {
+    margin-left: 16px;
+    margin-right: 16px;
+    color: $gray_800;
+    -webkit-user-select: none; 
+    user-select: none; 
+}
+.jumper {
+    input {
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        margin: 0 8px 0 16px;
+        padding: 3px 10px 3px 10px;
+        height: 36px;
+        width: 52px;
+        color: #2c2d2e;
+        font-size: inherit;
+        text-align: center;
+        height: 36px;
+        line-height: 1;
+        background-color: #fff;
+        border: 1px solid $gray_400;
+        border-radius: 2px;
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+        transition: border-color .1s ease;   
+
+        &:focus {
+            border-color: $gray_500;
+        }
+    }
+}
+.paginationIcon {
+    display: inline-block;
+    position: relative;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+
+    &:hover {
+        svg {
+            fill: #87888c;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        left: -2px;
+        top: -4px;
+        width: 20px;
+        height: 24px;
+    }
+
+    svg {
+        display: inline-block;
+        vertical-align: -3px;
+        fill: #bdbec0;
+        will-change: fill;
+        transition: .1s ease fill;
+    }
+}

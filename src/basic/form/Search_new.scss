@@ -1,0 +1,61 @@
+@import '../../color.scss';
+
+.search {
+    position: relative;
+    display: inline-block;
+}
+
+.searchBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+
+    [data-role^="icon"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        fill: #bdbec0;
+    }
+
+    &:hover {
+        [data-role^="icon"] {
+            fill: #87888c;
+        }
+    }
+}
+
+.input {
+    box-sizing: border-box;
+    display: block;
+    padding: 3px 36px 3px 10px;
+    width: 100%;
+    color: #2c2d2e;
+    font-size: inherit;  
+    height: 36px;
+    line-height: 1;
+    background-color: #fff;
+    border: 1px solid $gray_400;
+    border-radius: 2px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;  
+    transition: border-color .1s ease; 
+
+    &:focus {
+        border-color: $gray_500;
+
+        & + i [data-role^="icon"] {
+            fill: #87888c;
+        }
+    }
+
+    &::-webkit-input-placeholder {
+        color: $gray_700;
+    }
+}

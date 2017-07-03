@@ -1,0 +1,67 @@
+//----------------------------
+//
+//  mixins.less v0.1.5
+//  http://mixinsless.com/
+//  Reuse snippets & Cross-browser private properties snippets.
+//----------------------------
+
+
+// Clearfix
+// -------------------------
+.clearfix() {
+    zoom:1;
+    &:before{
+        content:'';
+        display:block;
+    }
+    &:after{
+        content:'';
+        display:table;
+        clear:both;
+    }
+}
+
+// CSS image replacement
+// -------------------------
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+.hide-text() {
+    font:0/0 a;
+    color:transparent;
+    text-shadow:none;
+    background-color:transparent;
+    border:0;
+}
+
+// Force line breaks
+// -------------------------
+.word-break() {
+    word-break:break-all;
+    word-wrap:break-word;
+    white-space: normal;
+}
+
+// No wrap
+// -------------------------
+.no-wrap() {
+    word-break: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+}
+
+// Text overflow with(...)
+// -------------------------
+// Requires inline-block or block for proper styling
+.text-overflow() {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    max-width:100%;
+}
+
+.line-overflow(@line) {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp:@line; /* number of lines to show */
+    -webkit-box-orient:vertical;
+}

@@ -1,0 +1,174 @@
+.root {
+    // position: relative;
+    position: absolute;
+    z-index: 99;
+
+    // TODO: 删除一下无用样式
+    ul{
+        text-align: center;
+
+        li{
+            text-align: left;
+
+            &:last-child{
+                border-bottom: none;
+            }
+
+            a {
+                padding: 2px 5px;
+                display: block;
+            }
+        }
+    }
+}
+
+.root_top {
+    composes: root;
+    padding-top: 20px;
+}
+.root_bottom {
+    composes: root;
+    padding-bottom: 20px;
+}
+.root_left {
+    composes: root;
+    padding-left: 20px;
+}
+.root_right {
+    composes: root;
+    padding-right: 20px;
+}
+
+.inner {
+    border: 1px solid #d9dadc;
+    padding: 10px 10px;
+    background-color: #ffffff;
+    box-shadow: none;
+    font-size: 14px;
+    color: #333;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+// buttons
+// ========================================
+.bar {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 0;
+    text-justify: distribute-all-lines;
+}
+
+.bar_button {
+    padding: 0 18px;
+}
+
+// 三角
+// ========================================
+.arrow_box {
+    position: absolute;
+}
+.arrow_box_center {
+    composes: arrow_box;
+    left: 50%;
+    margin-left: -12px;
+}
+.arrow_box_middle {
+    composes: arrow_box;
+    top: 50%;
+    margin-top: -12px;
+}
+
+.arrow_box_top {
+    composes: arrow_box_center;
+    top: 0;
+}
+.arrow_box_bottom {
+    composes: arrow_box_center;
+    bottom: 0;
+}
+.arrow_box_right {
+    composes: arrow_box_middle;
+    right: 0;
+}
+.arrow_box_left {
+    composes: arrow_box_middle;
+    left: 0;
+}
+
+.arrow {
+    position: absolute;
+    display: inline-block;
+    border-width: 8px;
+    width: 0;
+    height: 0;
+    border-style: dashed;
+    border-color: transparent;
+}
+
+
+.arrow_out_top,
+.arrow_in_top {
+    border-bottom-style: solid;
+}
+.arrow_out_top {
+    composes: arrow;
+    border-top-width: 0;
+    border-bottom-color: #d3d3d3;
+    top: 12px;
+}
+.arrow_in_top {
+    composes: arrow;
+    border-top-width: 0;
+    border-bottom-color: #ffffff;
+    top: 13px;
+}
+.arrow_out_bottom,
+.arrow_in_bottom {
+    border-top-style: solid;
+}
+.arrow_out_bottom {
+    composes: arrow;
+    border-bottom-width: 0;
+    border-top-color: #d3d3d3;
+    bottom: 12px;
+}
+.arrow_in_bottom {
+    composes: arrow;
+    border-bottom-width: 0;
+    border-top-color: #ffffff;
+    bottom: 13px;
+}
+.arrow_out_right,
+.arrow_in_right {
+    border-left-style: solid;
+}
+.arrow_out_right {
+    composes: arrow;
+    border-right-width: 0;
+    border-left-color: #d3d3d3;
+    right: 12px;
+}
+.arrow_in_right {
+    composes: arrow;
+    border-right-width: 0;
+    border-left-color: #ffffff;
+    right: 13px;
+}
+.arrow_out_left,
+.arrow_in_left {
+    border-right-style: solid;
+}
+.arrow_out_left {
+    composes: arrow;
+    border-left-width: 0;
+    border-right-color: #d3d3d3;
+    left: 12px;
+}
+.arrow_in_left {
+    composes: arrow;
+    border-left-width: 0;
+    border-right-color: #ffffff;
+    left: 13px;
+}

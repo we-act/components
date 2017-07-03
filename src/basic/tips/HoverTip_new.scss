@@ -1,0 +1,21 @@
+.wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 2px;
+    height: 18px;
+    vertical-align: top;
+
+    [data-role^="icon"] {
+        transition: .3s ease fill;
+    }
+
+    &:hover {
+        [data-role^="icon"] {
+            fill: #87888c;
+            
+            path {
+                transition: 0s ease fill;
+            }
+        }
+    }
+}

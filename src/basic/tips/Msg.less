@@ -1,0 +1,150 @@
+@import "../../lib-var.less";
+@import "../../lib-mixins.less";
+
+//小
+.mod-page-msg_small {
+    border-radius: 3px;
+
+    .mod-page-msg__inner {
+        padding: 0 15px;
+        border-radius: 3px;
+    }
+    .mod-page-msg__icon2 {
+        height: 16px;
+        margin-top: 8px;
+        width: 16px;
+    }
+    .mod-page-msg__icon_info2 {
+        background-image: url("./icon-msg/icon-info_small.png");
+    }
+    .mod-page-msg__icon_warn2 {
+        background-image: url("./icon-msg/icon-warn_small.png");
+    }
+    .mod-page-msg__icon_success2{
+        background-image: url("./icon-msg/icon-succ_small.png");
+    }
+    .mod-page-msg__icon_progress2{
+        background-image: url("./icon-msg/small.gif");
+    }
+    .mod-page-msg__content {
+        height: 33px;
+        line-height:33px;
+        padding-top:0;
+    }
+    .msg-page-msg__desc{
+        color:#333;
+    }
+    .msg-page-msg__desc_gray {
+        color: @font-assist;
+    }
+
+}
+.mod-page-msg__inner {
+    padding: 12px 70px;
+    position: relative;
+    .clearfix();
+}
+.mod-page-msg__icon2 {
+    float: left;
+    margin-right: 10px;
+    height: 46px;
+    width: 46px;
+}
+.mod-page-msg__icon_mid{
+    height: 32px;
+    width: 32px;
+}
+.mod-page-msg__icon_success2{
+    background-image: url("./icon-msg/icon-succ.png");
+}
+.mod-page-msg__icon_warn2{
+    background-image: url("./icon-msg/icon-warn.png");
+}
+.mod-page-msg__icon_info2{
+    background-image: url("./icon-msg/icon-info.png");
+}
+.mod-page-msg__icon_progress2{
+    background-image: url("./icon-msg/normal.gif");
+}
+
+
+.mod-page-msg__content {
+    overflow: hidden;
+}
+
+.msg-page-msg__title {
+    font-size: 14px;
+}
+.msg-page-msg__title-lg {
+   font-size:24px;
+    color:#4A4A4A;
+    margin-left:5px;
+    line-height:32px;
+}
+.msg-page-msg__title_only{
+    margin-top:12px;
+}
+
+.msg-page-msg__desc {
+    font-size: 14px;
+    color: #7b7b7b;
+}
+
+//居中
+.mod-page-msg_center {
+    text-align: center;
+    .mod-page-msg__inner {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        text-align: left;
+    }
+}
+
+//中
+.mod-page-msg_mid {
+    .mod-page-msg__inner {
+        padding: 10px 40px 10px 10px;
+    }
+    .mod-page-msg__icon2 {
+        height: 32px;
+        width: 32px;
+    }
+    .mod-page-msg__icon_success2 {
+        background-image: url(./icon-msg/icon-succ_mid.png);
+    }
+    .mod-page-msg__icon_info2{
+        background-image: url(./icon-msg/icon-info_mid.png);
+    }
+    .mod-page-msg__icon_warn2 {
+        background-image: url(./icon-msg/icon-warn_mid.png);
+    }
+    .mod-page-msg__icon_progress2 {
+        background-image: url(./icon-msg/mid.gif);
+    }
+
+}
+
+//背景色
+.mod-page-msg_bgcolor {
+    .mod-page-msg__inner {
+        background: #e0eaf6;
+    }
+    .msg-page-msg__desc{
+        color: #626f7b;
+    }
+}
+.mod-page-msg_bgcolor-warn{
+    .mod-page-msg__inner {
+        background: #f9e9e9;
+    }
+    .msg-page-msg__desc{
+        color: @font-error;
+    }
+}
+
+
+.mod-page-msg__content_mid_two{
+    padding-top: 0;
+    line-height: 1.2;
+}

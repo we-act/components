@@ -1,0 +1,36 @@
+@import '../../color.scss';
+
+.cover {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.swatch {
+  padding: 5px;
+  background: $gray_100;
+  border-radius: 2px;
+  border: 1px solid $gray_400;
+  display: inline-block;
+  cursor: pointer;
+}
+.swatch:hover {
+  background: $gray_200;
+  border-color: $gray_500;
+}
+.popover {
+  position: absolute; 
+  z-index: 2;
+  left: -18px;
+  top: 43px;
+}
+
+.color {
+  width: 36px;
+  height: 20px;
+  border: 1px solid $gray_300;
+  border-radius: 2px;
+  box-sizing: border-box;
+}

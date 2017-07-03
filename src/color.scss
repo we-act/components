@@ -1,0 +1,77 @@
+
+//微信mp新版UI色彩定义
+$fontDefault:              #222222;
+$fontAssist:               #8d8d8d;
+$fontSuccess:              #63C168;
+$fontError:                #E15F63;
+$fontLink:                 #459ae9;
+$borderDefault:            #E7E7EB;
+$backgroundHighlight:      #f4f5f9;
+$colorGreen:               #3DCC47;
+$colorRed:                 #E15F63;
+$colorOrange:              #FFC33A;
+
+$backgroundGreen:          #2f9833;
+$backgroundRed:            #f24d4d;
+
+// 新的颜色体系 - “色重”
+
+// 灰色系 gray_100~900
+// gray_700 为次次级字体
+// gray_800 为次级字体
+// gray_900 为主字体
+$gray_100:                 #f9fbfd;
+$gray_200:                 #f4f6f9;
+$gray_300:                 #eef0f4;
+$gray_400:                 #e4e6eb;
+$gray_500:                 #dadce1;
+$gray_600:                 #c9ccd1;
+$gray_700:                 #9a9ca1;
+$gray_800:                 #65676e;
+$gray_900:                 #24262e;
+
+// 绿色系 gray_100~900
+
+$green_100:                #44b549;
+$green_200:                #41a947;
+$green_300:                #3e9e45;
+$green_400:                #41a947;
+$green_500:                #3e9e45;
+$green_600:                #c4c7cc;
+$green_700:                #9a9ca1;
+$green_800:                #65676e;
+$green_900:                #24262e;
+
+
+:export {
+  fontDefault: $fontDefault;
+  fontAssist: $fontAssist;
+  fontSuccess: $fontSuccess;
+  fontError: $fontError;
+  fontLink: $fontLink;
+  borderDefault: $borderDefault;
+  backgroundHighlight: $backgroundHighlight;
+  colorGreen: $colorGreen;
+  colorRed: $colorRed;
+  colorOrange: $colorOrange;
+  backgroundGreen: $backgroundGreen;
+  backgroundRed: $backgroundRed;
+  gray_100: $gray_100;
+  gray_200: $gray_200;
+  gray_300: $gray_300;
+  gray_400: $gray_400;
+  gray_500: $gray_500;
+  gray_600: $gray_600;
+  gray_700: $gray_700;
+  gray_800: $gray_800;
+  gray_900: $gray_900;
+  green_100: $green_100;
+  green_200: $green_200;
+  green_300: $green_300;
+  green_400: $green_400;
+  green_500: $green_500;
+  green_600: $green_600;
+  green_700: $green_700;
+  green_800: $green_800;
+  green_900: $green_900
+}

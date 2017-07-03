@@ -1,0 +1,52 @@
+// TODO: replace this with file @ mpweb repo /src/js/rdcanvas/canvas_edit/components/Widgets/UploadImageMulti.scss
+
+.wrp {
+  vertical-align:top;
+  font-size:0;
+}
+.imgWrp {
+  width:100px;
+  height:100px;
+  margin-right:10px;
+  position:relative;
+  display:inline-block;
+  background-size: cover;
+  background-position: center center;
+}
+.uploadWrp {
+  border: 1px dashed #bcbcbc;
+  background-color:#efefef;
+  position:relative;
+  width:100px;
+  height:100px;
+  margin-right:10px;
+  display:inline-block;
+  box-sizing:border-box;
+}
+.imgOpr {
+  position:absolute;
+  height:22px;
+  bottom:0;
+  left:0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 1;
+  width:100%;
+  text-align:center;
+
+  &:hover {
+    i[data-role = 'icon']{
+      background-image: url("../icon/icons/bin_hover.png");
+    }
+  }
+}
+.add {
+  background-image: url("./upload-add.png");
+  width:24px;
+  height:24px;
+  position:absolute;
+  top:50%;
+  margin-top:-12px;
+  left:50%;
+  margin-left:-12px;
+  cursor: pointer;
+}

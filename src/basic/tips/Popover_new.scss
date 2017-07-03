@@ -1,0 +1,85 @@
+@import '../../color.scss';
+
+.popover {
+    position: absolute;
+    z-index: 1;
+    padding: 20px;
+    width: 200px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 22px;
+    color: $gray_800;
+    white-space: normal;
+    background-color: #fff;
+    border: 1px solid $gray_600;
+    border-radius: 2px;
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.03), 
+                0 1px 2px 0 rgba(0,0,0,0.06), 
+                0 3px 6px 0 rgba(0,0,0,0.04);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(.8);
+    transform-origin: 80% 0%;
+    transition: .25s cubic-bezier(.91,.04,.69,1.04) all .1s;
+}
+
+.buttons {
+    padding-top: 24px;
+    text-align: center;
+}
+
+.arrow {
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: .2s cubic-bezier(.62,.28,.24,1.45) all;
+}
+
+.topRight,
+.topLeft {
+    top: -5px;
+    border-top: 1px solid #bdc0c4;
+    border-right: 1px solid #bdc0c4;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-top-right-radius: 2px;
+    transform: rotate(-45deg);
+}
+.rightTop {
+    right: -5px;
+    border-top: 1px solid #bdc0c4;
+    border-right: 1px solid #bdc0c4;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-top-right-radius: 2px;
+    transform: rotate(45deg);
+}
+.bottomRight,
+.bottomLeft {
+    bottom: -5px;
+    border-top: 1px solid #bdc0c4;
+    border-right: 1px solid #bdc0c4;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-top-right-radius: 2px;
+    transform: rotate(135deg);
+}
+.rightTop {
+    top: 38px;
+}
+.bottomRight,
+.topRight {
+    right: 38px;
+}
+.bottomLeft,
+.topLeft {
+    left: 38px;
+}

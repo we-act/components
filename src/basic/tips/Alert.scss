@@ -1,0 +1,55 @@
+.wrapper {
+    position: relative;
+    box-sizing: border-box;
+    padding: 8px 12px 8px 36px;
+    line-height: 20px;
+    background-color: #deedff;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.infoIcon,
+.cancelIcon {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+}
+.infoIcon {
+    left: 12px;
+    fill: #459AE9;
+}
+.cancelIcon {
+    right: 12px;
+    cursor: pointer;
+
+    svg {
+        fill: #bdbec0;
+    }
+
+    &:hover {
+        svg {
+            fill: #87888c;  
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        top: -10px;
+        left: -10px;
+    }
+}
+.closable {
+    padding-right: 36px;
+}
+.removing {
+    transform-origin: 50% 0%;
+    transition: .22s cubic-bezier(0.74, 0.32, 0.37, 0.99) margin,
+                .22s cubic-bezier(0.74, 0.32, 0.37, 0.99) padding-top,
+                .22s cubic-bezier(0.74, 0.32, 0.37, 0.99) padding-bottom,
+                .22s cubic-bezier(0.74, 0.32, 0.37, 0.99) height,
+                .12s cubic-bezier(0.74, 0.32, 0.37, 0.99) opacity;
+}

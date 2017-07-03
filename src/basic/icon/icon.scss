@@ -1,0 +1,46 @@
+.base {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+
+.clock {
+    width: 16px;
+    height: 16px;
+    vertical-align: -3px;
+    background-image: url("./icon-clock.png");
+}
+
+
+.cancel{
+    margin-bottom: 3px;
+    width: 13px;
+    height: 13px;
+    background-image: url("./icons/cancel.png");
+    cursor: pointer;
+
+    &:hover{
+        background-image: url("./icons/cancel_hover.png");
+    }
+}
+.bin {
+    background-image: url("./icons/bin.png");
+    width: 15px;
+    height: 18px;
+    cursor:pointer;
+}
+.add {
+    background-image: url('./icons/add.png');
+    width: 17px;
+    height: 16px;
+    cursor: pointer;
+    &:hover {
+        background-image: url('./icons/add_hover.png');
+    }
+}
+.rightArrow {
+    width: 7px;
+    height: 11px;
+    background-image: url("./icons/right-arrow.png");
+}

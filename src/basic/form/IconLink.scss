@@ -1,0 +1,43 @@
+@import '../../color.scss';
+
+.link {
+    display: inline-block;
+    line-height: 16px;
+    // 使用 $gray_700 有些淡，这里使用了 gray_800 的 .8
+    color: rgba(101, 103, 110, .8);
+    transition: .1s ease color;
+
+    [data-role^="icon"] {
+        margin-right: 4px;
+        width: 16px;
+        height: 16px;
+        vertical-align: top;
+        fill: #bdbec0;
+    }
+
+    &:not(:last-of-type) {
+        margin-right: 24px;
+    }
+
+    &:hover {
+        color: $gray_800;
+        text-decoration: none;
+
+        [data-role^="icon"] {
+            fill: #87888c;
+        }
+    }
+}
+
+.disabled {
+    opacity: .5;
+    cursor: default;
+
+    &:hover {
+        color: $gray_700;
+
+        [data-role^="icon"] {
+            fill: #bdbec0;
+        }
+    }
+}

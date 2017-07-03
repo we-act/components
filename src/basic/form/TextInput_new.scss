@@ -1,0 +1,101 @@
+@import '../../color.scss';
+
+.input {
+    box-sizing: border-box;
+    padding: 3px 10px;
+    color: #2c2d2e;
+    font-size: inherit;  
+    height: 36px;
+    line-height: 1;
+    background-color: #fff;
+    border: 1px solid $gray_400;
+    border-radius: 2px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;  
+    transition: border-color .1s ease; 
+
+    &:focus {
+        border-color: $gray_500;
+
+        & + i [data-role^="icon"] {
+            fill: #87888c;
+        }
+    }
+
+    &::-webkit-input-placeholder {
+        color: $gray_700;
+    }
+}
+.sizeLarge {
+    height: 42px;
+}
+.sizeSmall {
+    height: 32px;
+}
+.sizeMini {
+    height: 28px;
+}
+.disabled {
+    cursor: default;
+    background-color: #f0f0f2;
+    color: #A3A4A6;
+
+    & + .icon {
+        cursor: default;
+        &:hover {
+            [data-role^="icon"] {
+                fill: #bdbec0;
+            }
+        }
+    }
+}
+
+.limit {
+    margin-left: 8px;
+    font-size: 13px;
+}
+.valid {
+    color: $gray_700;
+}
+.invalid {
+    color: #f24d4d;
+}
+.icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+
+    [data-role^="icon"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 16px;
+        height: 16px;
+        fill: #bdbec0;
+    }
+
+    &:hover {
+        [data-role^="icon"] {
+            fill: #87888c;
+        }
+    }
+}
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
+}
+.iconRight {
+    padding-right: 35px;
+}
+.iconLeft {
+    padding-left: 35px;
+}

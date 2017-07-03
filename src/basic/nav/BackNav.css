@@ -1,0 +1,12 @@
+.iconGoback {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 26px;
+  height: 26px;
+  background-image: url("./img/icon-goback.png");
+
+  &:hover {
+    background-image: url("./img/icon-goback_hover.png");
+  }
+}
