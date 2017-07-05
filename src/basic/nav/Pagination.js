@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Button from '../form/Button_new'
+import Button from '../form/Button'
 import IconMpKeyboardLeft from 'componentPath/svgicons/mp/IconMpKeyboardLeft'
 import IconMpKeyboardRight from 'componentPath/svgicons/mp/IconMpKeyboardRight'
 import IconMpTriangleLeft from 'componentPath/svgicons/mp/IconMpTriangleLeft'

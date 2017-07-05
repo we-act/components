@@ -1,0 +1,60 @@
+/**
+ * 示例用的 css，不能写到 style-moment-edit-template.less 等中
+ */
+
+body {
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 60px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid rgba(0,0,0,.07);
+    -webkit-transition: -webkit-transform .1s ease-out;
+    transition: -webkit-transform .1s ease-out;
+    transition: transform .1s ease-out;
+    transition: transform .1s ease-out,-webkit-transform .1s ease-out;
+    width: 200px;
+    z-index: 2;
+}
+.body {
+    position: absolute;
+    left: 300px;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: left .1s ease-out;
+}
+
+.app1-content {
+    padding: 20px 40px;
+}
+
+.container_box {
+    // border: 1px solid #d9dadc;
+    background-color: #fff;
+}
+.app1-top-nav {
+    padding: 20px;
+}
+.app1-top-nav a {
+    padding: 5px 10px;
+}
+.app1-pagefile-list-body {
+    padding: 20px;
+}
+.app1-pagefile-list-folder {
+    font-weight: 700;
+}
+
+// 不用 server render 方法了，没什么用了
+// html.s-build .app1-top-nav {
+//     display: none;
+// }

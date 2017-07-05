@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import Button from '../basic/form/Button_new'
+import Button from '../basic/form/Button'
 import VerticalCenter from '../basic/layout/VerticalCenter'
 import styles from './withModal.scss'
 

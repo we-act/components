@@ -1,0 +1,84 @@
+[
+  {
+    "path": "form",
+    "name": "form",
+    "children": [
+      {
+        "path": "form/FormGroup.js",
+        "name": "FormGroup"
+      },
+      {
+        "path": "form/Button.js",
+        "name": "Button"
+      },
+      {
+        "path": "form/RadioGroup.js",
+        "name": "RadioGroup"
+      },
+      {
+        "path": "form/Dropdown.js",
+        "name": "Dropdown"
+      },
+      {
+        "path": "form/InstantSearch.js",
+        "name": "InstantSearch"
+      },
+      {
+        "path": "form/SearchList.js",
+        "name": "SearchList"
+      }
+    ]
+  },
+  {
+    "path": "icon",
+    "name": "icon",
+    "children": [
+      {
+        "path": "icon/Icon.js",
+        "name": "Icon"
+      }
+    ]
+  },
+  {
+    "path": "layout",
+    "name": "layout",
+    "children": [
+      {
+        "path": "layout/Dialog.js",
+        "name": "Dialog"
+      },
+      {
+        "path": "layout/PlaceholderBox.js",
+        "name": "PlaceholderBox"
+      },
+      {
+        "path": "layout/layout.js",
+        "name": "layout"
+      }
+    ]
+  },
+  {
+    "path": "nav",
+    "name": "nav",
+    "children": [
+      {
+        "path": "nav/nav.js",
+        "name": "nav"
+      },
+      {
+        "path": "nav/table.js",
+        "name": "table"
+      }
+    ]
+  },
+  {
+    "path": "tips",
+    "name": "tips",
+    "children": [
+      {
+        "path": "tips/tips.js",
+        "name": "tips"
+      }
+    ]
+  }
+]
